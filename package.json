@@ -1,0 +1,12 @@
+{
+  "name": "flickr-oauth",
+  "author" : "jimib",
+  "version": "0.0.1",
+  "private": true,
+  "description" : "Flickr api using the newer Oauth 1.0a implementation",
+  "scripts": {
+  },
+  "dependencies": {
+		"oauth" : "latest"
+  }
+}
