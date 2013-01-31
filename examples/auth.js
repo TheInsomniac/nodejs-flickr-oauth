@@ -48,13 +48,13 @@ function getUserPhotos(auth_token,auth_token_secret,userId){
 		method : "flickr.people.getPhotos"
 	}
 	
-	flickr.setAuthenticationToken(auth_token, auth_token_secret);
-	flickr.people.getPhotos(userId, function(err, data){
+	flickr.withAuthentication(auth_token, auth_token_secret).people.getPhotos(userId, function(err, data){
 		console.log(err);
 		console.log(data);
 	});
 }
 
+/*
 function getUserPhotosOld(auth_token,auth_token_secret,userId){
 	//http://www.flickr.com/services/rest?api_key=40edfea51a1c7b5efef05dae3ba3aee4&user_id=66296360%40N05&format=json&method=flickr.people.getPhotos
 	//http://www.flickr.com/services/rest?user_id=66296360%40N05&format=json&api_key=40edfea51a1c7b5efef05dae3ba3aee4&method=flickr.people.getPhotos
@@ -86,6 +86,6 @@ function getUserPhotosOld(auth_token,auth_token_secret,userId){
 		}
 	});
 }
-
+*/
 
 
